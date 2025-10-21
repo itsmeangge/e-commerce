@@ -1,0 +1,74 @@
+/* src/components/ProductCard.css */
+.product-card {
+  /* Mimic the gray card style from the reference image */
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  background-color: white; /* White background for the image area */
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.product-info {
+  padding: 10px 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* Button style matching the reference image (gray background, rounded) */
+.add-to-cart-btn {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #555;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #777;
+}
+
+.view-details-link {
+    /* Hide 'View Details' link from the card as the whole card is for viewing
+       and we have an Add to Cart button matching the reference */
+    display: none; 
+}
