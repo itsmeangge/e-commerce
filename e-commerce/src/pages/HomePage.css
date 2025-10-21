@@ -1,0 +1,8 @@
+.home {
+  background-image: url("../assets/bg.jpg");
+  background-size: contain; /* show full image without cutting */
+  background-repeat: no-repeat;
+  background-position: center top; /* adjust position to match your example */
+  background-color: #000; /* optional — adds background behind transparent parts */
+  height: 100vh;
+}
