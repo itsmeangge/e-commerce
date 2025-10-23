@@ -26,7 +26,7 @@ const Checkout = () => {
   });
 
   const totalPrice = getTotalPrice();
-  const shippingCost = 5.99;
+  const shippingCost = 6.00;
   const taxAmount = totalPrice * 0.08;
   const finalTotal = totalPrice + shippingCost + taxAmount;
 
@@ -48,10 +48,10 @@ const Checkout = () => {
 
   const handleSubmitOrder = (e) => {
     e.preventDefault();
-    // In a real app, you would process the payment and order here
+    
     alert('Order placed successfully! Thank you for your purchase.');
     clearCart();
-    // Redirect to home or order confirmation page
+   
     window.location.hash = '#/';
   };
 
