@@ -6,75 +6,39 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        background: "#555",
-        padding: "15px 70px",
-      }}
-    >
-      <div style={{ color: "white", fontSize: "2.5rem", fontWeight: "500" }}>
-        WearDistrict
-      </div>
+    <nav className="navbar">
+      <div className="nav-brand">WearDistrict</div>
 
-      <div style={{ flex: 1, textAlign: "center" }}>
+      <div className="nav-search">
         <input
           type="text"
           placeholder="What are you looking for?"
-          style={{
-            width: "60%",
-            padding: "13px 25px",
-            borderRadius: "10px",
-            border: "none",
-            outline: "none",
-          }}
+          className="search-input"
         />
       </div>
 
-      <div>
-        <Link
-          to="/"
-          style={{
-            fontSize: "1.5rem",
-            color: "white",
-            marginRight: "20px",
-            fontWeight: location.pathname === "/" ? "bold" : "normal",
-            textDecoration: "none",
-          }}
+      <div className="nav-links">
+        <Link 
+          to="/" 
+          className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
         >
           Home
         </Link>
-        <Link
-          to="/about"
-          style={{
-            fontSize: "1.5rem",
-            color: "white",
-            marginRight: "20px",
-            textDecoration: "none",
-          }}
+        <Link 
+          to="/about" 
+          className="nav-link"
         >
           About
         </Link>
-        <Link
-          to="/product"
-          style={{
-            fontSize: "1.5rem",
-            color: "white",
-            marginRight: "20px",
-            textDecoration: "none",
-          }}
+        <Link 
+          to="/products" 
+          className={`nav-link ${location.pathname === "/products" ? "active" : ""}`}
         >
           Product
         </Link>
-        <Link
-          to="/cart"
-          style={{
-            fontSize: "1.5rem",
-            color: "white",
-            textDecoration: "none",
-          }}
+        <Link 
+          to="/cart" 
+          className={`nav-link ${location.pathname === "/cart" ? "active" : ""}`}
         >
           Cart
         </Link>
